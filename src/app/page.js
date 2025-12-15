@@ -1,65 +1,173 @@
-import Image from "next/image";
+'use client';
+
+import { Container, Typography, Box, Button } from '@mui/material';
+import { Icon } from '@iconify/react';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'linear-gradient(135deg, #FFF8E7 0%, #F5F5DC 100%)',
+        padding: 4,
+      }}
+    >
+      <Container maxWidth="md">
+        <Box
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 4,
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 2,
+              mb: 2,
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Icon icon="mdi:flower" width={48} height={48} color="#1B5E3E" />
+            <Typography
+              variant="h1"
+              component="h1"
+              sx={{
+                fontWeight: 800,
+                color: 'primary.main',
+                fontSize: { xs: '2rem', md: '3rem' },
+              }}
+            >
+              آ ایران
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="h2"
+            component="h2"
+            sx={{
+              fontWeight: 600,
+              color: 'text.primary',
+              fontSize: { xs: '1.5rem', md: '2rem' },
+            }}
           >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            A Iran
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: '1.125rem',
+              color: 'text.secondary',
+              maxWidth: '600px',
+              lineHeight: 1.8,
+            }}
+          >
+            برند آ ایران، ارائه‌دهنده پوشاک زنانه لوکس با الهام از نقوش و الگوهای اصیل
+            ایرانی و مد مدرن. لباس‌های دوخته شده با کیفیت عالی و طراحی منحصر به فرد.
+          </Typography>
+
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 2,
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              mt: 2,
+            }}
+          >
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: '1rem',
+                backgroundColor: 'primary.main',
+                '&:hover': {
+                  backgroundColor: 'primary.dark',
+                },
+              }}
+            >
+              مشاهده محصولات
+            </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: '1rem',
+                borderColor: 'primary.main',
+                color: 'primary.main',
+                '&:hover': {
+                  borderColor: 'primary.dark',
+                  backgroundColor: 'primary.light',
+                  color: 'white',
+                },
+              }}
+            >
+              درباره ما
+            </Button>
+          </Box>
+
+          <Box
+            sx={{
+              mt: 6,
+              display: 'flex',
+              gap: 3,
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <Icon icon="mdi:palette" width={32} height={32} color="#40B5A4" />
+              <Typography variant="body2" color="text.secondary">
+                طراحی اصیل
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <Icon icon="mdi:quality-high" width={32} height={32} color="#D4AF37" />
+              <Typography variant="body2" color="text.secondary">
+                کیفیت عالی
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 1,
+              }}
+            >
+              <Icon icon="mdi:hand-heart" width={32} height={32} color="#1B5E3E" />
+              <Typography variant="body2" color="text.secondary">
+                دوخت سفارشی
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   );
 }
