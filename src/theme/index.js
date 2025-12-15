@@ -2,20 +2,43 @@ import { createTheme } from '@mui/material/styles';
 import { prefixer } from 'stylis';
 import rtlPlugin from '@mui/stylis-plugin-rtl';
 
-// Persian luxury color palette inspired by Iranian culture
+// Persian luxury color palette centered around cyan (#00c7ca)
 const persianColors = {
-  deepEmerald: '#1B5E3E',      // Deep emerald green
-  emerald: '#2D8659',          // Medium emerald
-  turquoise: '#40B5A4',        // Turquoise blue-green
-  lightTurquoise: '#6BCFC7',   // Light turquoise
-  ivory: '#F5F5DC',            // Ivory/cream
-  warmIvory: '#FFF8E7',        // Warm ivory
-  gold: '#D4AF37',             // Gold accent
-  darkGold: '#B8941F',         // Dark gold
-  charcoal: '#2C2C2C',         // Charcoal for text
-  softGray: '#F5F5F5',         // Soft gray background
+  // Primary Cyan Family
+  cyan: '#00c7ca',              // Primary cyan
+  cyanLight: '#33d4d7',          // Light cyan
+  cyanLighter: '#66e1e4',        // Lighter cyan
+  cyanDark: '#009fa2',           // Dark cyan
+  cyanDarker: '#00777a',         // Darker cyan
+  
+  // Secondary Teal/Turquoise Family
+  teal: '#008B8B',               // Deep teal (complementary)
+  tealLight: '#20A5A5',          // Light teal
+  tealDark: '#006B6B',           // Dark teal
+  
+  // Accent Colors
+  coral: '#FF6B6B',               // Coral accent (warm contrast)
+  coralLight: '#FF8E8E',         // Light coral
+  coralDark: '#E55555',          // Dark coral
+  gold: '#D4AF37',               // Gold accent
+  goldLight: '#E5C85A',          // Light gold
+  goldDark: '#B8941F',           // Dark gold
+  
+  // Neutral Backgrounds
+  ivory: '#F8FDFD',              // Cyan-tinted ivory
+  warmIvory: '#F0F9F9',          // Warm cyan-tinted ivory
+  softCyan: '#E8F7F7',           // Soft cyan background
   white: '#FFFFFF',
+  
+  // Text Colors
+  charcoal: '#1A2E35',           // Deep teal-charcoal
+  darkGray: '#2C3E47',           // Dark gray
+  mediumGray: '#5A6B73',          // Medium gray
+  lightGray: '#8A9BA3',          // Light gray
+  
+  // Utility
   black: '#000000',
+  softGray: '#F5F7F8',           // Soft gray background
 };
 
 export const theme = createTheme({
@@ -23,21 +46,45 @@ export const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: persianColors.deepEmerald,
-      light: persianColors.emerald,
-      dark: '#0F3D2A',
+      main: persianColors.cyan,
+      light: persianColors.cyanLight,
+      dark: persianColors.cyanDark,
       contrastText: persianColors.white,
     },
     secondary: {
-      main: persianColors.turquoise,
-      light: persianColors.lightTurquoise,
-      dark: '#2A8F7D',
+      main: persianColors.teal,
+      light: persianColors.tealLight,
+      dark: persianColors.tealDark,
+      contrastText: persianColors.white,
+    },
+    error: {
+      main: persianColors.coral,
+      light: persianColors.coralLight,
+      dark: persianColors.coralDark,
+      contrastText: persianColors.white,
+    },
+    warning: {
+      main: persianColors.gold,
+      light: persianColors.goldLight,
+      dark: persianColors.goldDark,
+      contrastText: persianColors.charcoal,
+    },
+    info: {
+      main: persianColors.cyan,
+      light: persianColors.cyanLight,
+      dark: persianColors.cyanDark,
+      contrastText: persianColors.white,
+    },
+    success: {
+      main: persianColors.teal,
+      light: persianColors.tealLight,
+      dark: persianColors.tealDark,
       contrastText: persianColors.white,
     },
     accent: {
       main: persianColors.gold,
-      light: '#E5C85A',
-      dark: persianColors.darkGold,
+      light: persianColors.goldLight,
+      dark: persianColors.goldDark,
       contrastText: persianColors.charcoal,
     },
     background: {
@@ -46,7 +93,7 @@ export const theme = createTheme({
     },
     text: {
       primary: persianColors.charcoal,
-      secondary: '#5A5A5A',
+      secondary: persianColors.mediumGray,
     },
     // Custom colors for the brand
     persian: persianColors,

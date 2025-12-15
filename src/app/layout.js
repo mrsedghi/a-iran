@@ -10,13 +10,22 @@ const vazirmatn = Vazirmatn({
 });
 
 export const metadata = {
-  title: "آ ایران | A Iran - پوشاک زنانه با الهام از هنر اصیل ایرانی",
-  description: "برند آ ایران، ارائه‌دهنده پوشاک زنانه لوکس با الهام از نقوش و الگوهای اصیل ایرانی و مد مدرن. لباس‌های دوخته شده با کیفیت عالی و طراحی منحصر به فرد.",
-  keywords: ["پوشاک زنانه", "مد ایرانی", "لباس زنانه", "فشن ایرانی", "آ ایران", "A Iran"],
+  title: "ای ایران | A Iran - پوشاک زنانه با الهام از هنر اصیل ایرانی",
+  description:
+    "برند ای ایران، ارائه‌دهنده پوشاک زنانه لوکس با الهام از نقوش و الگوهای اصیل ایرانی و مد مدرن. لباس‌های دوخته شده با کیفیت عالی و طراحی منحصر به فرد.",
+  keywords: [
+    "پوشاک زنانه",
+    "مد ایرانی",
+    "لباس زنانه",
+    "فشن ایرانی",
+    "ای ایران",
+    "A Iran",
+  ],
   authors: [{ name: "A Iran" }],
   openGraph: {
-    title: "آ ایران | A Iran - پوشاک زنانه با الهام از هنر اصیل ایرانی",
-    description: "برند آ ایران، ارائه‌دهنده پوشاک زنانه لوکس با الهام از نقوش و الگوهای اصیل ایرانی",
+    title: "ای ایران | A Iran - پوشاک زنانه با الهام از هنر اصیل ایرانی",
+    description:
+      "برند ای ایران، ارائه‌دهنده پوشاک زنانه لوکس با الهام از نقوش و الگوهای اصیل ایرانی",
     type: "website",
     locale: "fa_IR",
   },
@@ -35,12 +44,10 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#1B5E3E" />
+        <meta name="theme-color" content="#00c7ca" />
       </head>
       <body className={`${vazirmatn.variable} antialiased`}>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
